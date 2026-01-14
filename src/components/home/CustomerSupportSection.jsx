@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 const CustomerSupportSection = () => {
@@ -46,12 +47,12 @@ const CustomerSupportSection = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer">
+              <Link href="/about" className="theme-btn">
                 ASK A QUESTION
-              </button>
-              <button className="px-8 py-3 border-2 border-teal-600 text-teal-600 font-bold rounded-full hover:bg-teal-50 transition-all duration-300 cursor-pointer">
+              </Link>
+              <Link href="/blog" className="common-btn-two">
                 DOCUMENTATION
-              </button>
+              </Link>
             </div>
           </div>
         </div>

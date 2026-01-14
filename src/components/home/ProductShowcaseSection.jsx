@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import React from 'react';
 
 const ProductShowcaseSection = () => {
@@ -57,9 +58,9 @@ const ProductShowcaseSection = () => {
 
               {/* Shop Button */}
               <div>
-                <button className="px-10 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer">
+                <Link href="/products" className="common-btn">
                   SHOP HERE
-                </button>
+                </Link>
               </div>
             </div>
           </div>

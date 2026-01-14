@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import React from 'react';
 
 const CTAFooterSection = () => {
@@ -31,9 +32,9 @@ const CTAFooterSection = () => {
           </h2>
 
           {/* CTA Button */}
-          <button className="px-12 py-4 bg-white hover:bg-gray-100 text-black font-bold rounded-full transition-all duration-300 transform hover:scale-105 text-lg shadow-lg hover:shadow-2xl cursor-pointer">
+          <Link href="/products" className="common-btn">
             BUY NOW
-          </button>
+          </Link>
         </div>
 
         {/* Wave Design at Bottom */}

@@ -92,7 +92,7 @@ const brands = [
                 {/* Read More Link */}
                 <Link
                   href={article.slug}
-                  className="text-gray-900 font-bold text-sm hover:text-blue-600 transition-colors duration-300 flex items-center gap-2 group/link"
+                  className="theme-btn"
                 >
                   READ MORE
                   <span className="group-hover/link:translate-x-2 transition-transform duration-300">

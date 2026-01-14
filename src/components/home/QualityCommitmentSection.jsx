@@ -1,6 +1,7 @@
 "use client"
 
 
+import Link from 'next/link';
 import React from 'react';
 
 const QualityCommitmentSection = () => {
@@ -33,9 +34,9 @@ const QualityCommitmentSection = () => {
             </div>
 
             {/* Learn More Button */}
-            <button className="px-8 py-3 border-2 border-gray-900 text-gray-900 font-semibold rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 flex items-center gap-2 cursor-pointer">
+            <Link href="/about" className="common-btn-two">
               <span>📚</span> Learn More
-            </button>
+            </Link>
           </div>
 
           {/* Decorative Elements */}

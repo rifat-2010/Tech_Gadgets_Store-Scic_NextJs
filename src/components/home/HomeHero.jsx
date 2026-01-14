@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 const HomeHero = () => {
@@ -44,12 +45,10 @@ const HomeHero = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="px-8 py-3 bg-yellow-400 hover:bg-yellow-300 text-black font-bold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-lg cursor-pointer">
-                    <span>🛒</span> Buy Now
-                  </button>
-                  <button className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 text-lg cursor-pointer cursor-pointer">
+                  <Link href="/products" className="theme-btn"> <span className="text-xl">🛒</span> Buy Now </Link>
+                  <Link href="/blog" className="common-btn">
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </div>
 

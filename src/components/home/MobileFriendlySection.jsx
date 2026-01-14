@@ -1,6 +1,7 @@
 "use client"
 
 
+import Link from 'next/link';
 import React from 'react';
 
 const MobileFriendlySection = () => {
@@ -29,12 +30,12 @@ const MobileFriendlySection = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                <Link href="/products" className="theme-btn">
                   Get Started
-                </button>
-                <button className="px-8 py-3 border-2 border-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 cursor-pointer">
+                </Link>
+                <Link href="/about" className="common-btn-two">
                   Learn More
-                </button>
+                </Link>
               </div>
 
               {/* Features List */}

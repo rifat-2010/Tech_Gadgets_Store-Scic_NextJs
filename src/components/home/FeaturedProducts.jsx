@@ -97,7 +97,7 @@ const FeaturedProducts = () => {
                         {product.price}
                       </span>
                       <button
-                        className={`w-full px-3 py-2 bg-linear-to-r ${product.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-sm`}
+                        className={`theme-btn`}
                       >
                         View
                       </button>
