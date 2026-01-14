@@ -8,10 +8,19 @@ import { auth } from "@/firebase/firebase.config";
 import { signOut } from "firebase/auth";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const { user, setUser, loading } = useContext(AuthContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const isActive = (href) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   // signOut function
   const handleSignout = () => {
@@ -44,25 +53,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             <Link
               href="/"
-              className="text-gray-700 hover:text-blue-600 font-medium transition duration-200"
+              className={`nav-link ${isActive("/") ? "active" : ""}`}
             >
               Home
             </Link>
             <Link
               href="/products"
-              className="text-gray-700 hover:text-blue-600 font-medium transition duration-200"
+              className={`nav-link ${isActive("/products") ? "active" : ""}`}
             >
               Products
             </Link>
             <Link
               href="/about"
-              className="text-gray-700 hover:text-blue-600 font-medium transition duration-200"
+              className={`nav-link ${isActive("/about") ? "active" : ""}`}
             >
               About
             </Link>
             <Link
               href="/blog"
-              className="text-gray-700 hover:text-blue-600 font-medium transition duration-200"
+              className={`nav-link ${isActive("/blog") ? "active" : ""}`}
             >
               Blog
             </Link>
@@ -137,28 +146,32 @@ const Navbar = () => {
             <Link
               href="/"
               onClick={closeMobileMenu}
-              className="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200"
+              className={`mobile-nav-link ${isActive("/") ? "active" : ""}`}
             >
               Home
             </Link>
             <Link
               href="/products"
               onClick={closeMobileMenu}
-              className="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200"
+              className={`mobile-nav-link ${
+                isActive("/products") ? "active" : ""
+              }`}
             >
               Products
             </Link>
             <Link
               href="/about"
               onClick={closeMobileMenu}
-              className="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200"
+              className={`mobile-nav-link ${
+                isActive("/about") ? "active" : ""
+              }`}
             >
               About
             </Link>
             <Link
               href="/blog"
               onClick={closeMobileMenu}
-              className="block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200"
+              className={`mobile-nav-link ${isActive("/blog") ? "active" : ""}`}
             >
               Blog
             </Link>

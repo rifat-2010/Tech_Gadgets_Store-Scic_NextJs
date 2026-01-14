@@ -25,16 +25,50 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-.common-btn{
-  @apply px-10 py-3 border-2 border-white hover:text-white hover:bg-black font-bold rounded-full bg-white text-black transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer
+.common-btn {
+  @apply px-10 py-3 border-2 border-white hover:text-white hover:bg-black font-bold rounded-full bg-white text-black transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer text-center;
 }
-.common-btn-two{
-  @apply px-10 py-3 border-2 border-white hover:border-black hover:border-2 text-white bg-black font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer
+.common-btn-two {
+  @apply px-10 py-3 border-2 border-white hover:border-black hover:border-2 text-white bg-black font-bold rounded-full hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 text-lg cursor-pointer text-center;
 }
 
+.theme-btn {
+  @apply px-8 py-3 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2 text-lg cursor-pointer border-none;
+}
 
-.theme-btn{
-  @apply px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2 text-lg cursor-pointer border-none
+/* Active Navigation Link Styles */
+.nav-link {
+  @apply text-gray-700 hover:text-blue-600 font-medium transition duration-200 relative pb-1;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  @apply text-blue-600 font-bold;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile Navigation Link Styles */
+.mobile-nav-link {
+  @apply block px-4 py-2 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200 border-l-4 border-transparent;
+}
+
+.mobile-nav-link.active {
+  @apply text-blue-600 font-bold bg-blue-50 border-l-4 border-blue-600;
 }

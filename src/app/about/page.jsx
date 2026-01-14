@@ -1,13 +1,11 @@
 import React from "react";
 import {
   FaCheckCircle,
-  FaTrophy,
   FaUsers,
-  FaGlobeAmericas,
   FaLightbulb,
   FaHeart,
 } from "react-icons/fa";
-import { AiOutlineRise, AiOutlineSafety } from "react-icons/ai";
+import { AiOutlineSafety } from "react-icons/ai";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -61,28 +59,6 @@ export default function AboutPage() {
     },
   ];
 
-  const team = [
-    {
-      name: "Alex Johnson",
-      role: "Founder & CEO",
-      expertise: "Tech Visionary",
-    },
-    {
-      name: "Sarah Chen",
-      role: "Head of Products",
-      expertise: "Product Innovation",
-    },
-    {
-      name: "Mike Roberts",
-      role: "Customer Success",
-      expertise: "Customer Care",
-    },
-    {
-      name: "Emma Davis",
-      role: "Operations Lead",
-      expertise: "Logistics Expert",
-    },
-  ];
 
   return (
     <div className="bg-white">
@@ -123,7 +99,7 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-600 text-lg mb-4">
                 We believe that technology should empower people, not complicate
-                their lives. That's why we handpick every product, verify its
+                their lives. That is why we handpick every product, verify its
                 quality, and back it with our commitment to excellence.
               </p>
               <p className="text-gray-600 text-lg">
