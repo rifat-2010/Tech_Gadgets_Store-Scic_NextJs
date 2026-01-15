@@ -30,6 +30,7 @@ export default function Blog() {
     {
       id: 1,
       title: "How Wireless Headphones Changed Our Audio Experience",
+      slug: "https://en.wikipedia.org/wiki/Headphones",
       excerpt:
         "Discover the evolution of wireless technology and how it revolutionized the way we listen to music.",
       image:
@@ -43,6 +44,7 @@ export default function Blog() {
     {
       id: 2,
       title: "Gaming Keyboards: Precision Meets Performance",
+      slug: "https://en.wikipedia.org/wiki/Gaming_keypad",
       excerpt:
         "Explore the latest mechanical gaming keyboards that define competitive gaming standards.",
       image:
@@ -56,6 +58,7 @@ export default function Blog() {
     {
       id: 3,
       title: "Smart Watches: The Future of Health Monitoring",
+      slug: "https://en.wikipedia.org/wiki/Smartwatch",
       excerpt:
         "Learn how smart watches are transforming personal health tracking and fitness monitoring.",
       image:
@@ -69,6 +72,7 @@ export default function Blog() {
     {
       id: 4,
       title: "Portable Speakers: Audio Freedom Wherever You Go",
+      slug: "https://en.wikipedia.org/wiki/Wireless_speaker",
       excerpt:
         "Discover the best portable speakers for outdoor adventures and travel.",
       image:
@@ -82,6 +86,7 @@ export default function Blog() {
     {
       id: 5,
       title: "Power Banks: Never Run Out of Battery Again",
+      slug: "https://en.wikipedia.org/wiki/Battery_pack",
       excerpt:
         "Essential guide to choosing the perfect power bank for your lifestyle.",
       image:
@@ -95,6 +100,7 @@ export default function Blog() {
     {
       id: 6,
       title: "4K Monitors: Redefining Visual Excellence",
+      slug: "https://en.wikipedia.org/wiki/4K_resolution",
       excerpt:
         "Explore the impact of ultra-high resolution displays on productivity and entertainment.",
       image:
@@ -104,37 +110,6 @@ export default function Blog() {
       category: "Display",
       readTime: "8 min read",
       likes: 298,
-    },
-  ];
-
-  const impacts = [
-    {
-      title: "Communication Revolution",
-      description:
-        "Gadgets have transformed how we connect with loved ones across the globe, making instant communication possible.",
-      icon: "🌐",
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
-      title: "Productivity Boost",
-      description:
-        "Modern tech gadgets have increased work efficiency and enabled remote work possibilities.",
-      icon: "⚡",
-      color: "from-yellow-500 to-orange-500",
-    },
-    {
-      title: "Health & Wellness",
-      description:
-        "Wearable technology now monitors our health metrics, promoting a healthier lifestyle.",
-      icon: "❤️",
-      color: "from-red-500 to-pink-500",
-    },
-    {
-      title: "Entertainment Unlimited",
-      description:
-        "Portable devices have redefined how we consume entertainment, anytime and anywhere.",
-      icon: "🎬",
-      color: "from-purple-500 to-indigo-500",
     },
   ];
 
@@ -258,10 +233,13 @@ export default function Blog() {
                       <AiOutlineHeart size={18} />
                       <span className="text-sm">{post.likes}</span>
                     </div>
-                    <button className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition duration-200">
+                    <Link
+                      href={post.slug}
+                      className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition duration-200"
+                    >
                       Read More
                       <AiOutlineRight />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

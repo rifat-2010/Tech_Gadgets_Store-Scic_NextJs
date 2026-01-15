@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { AiOutlineStar, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineStar } from "react-icons/ai";
+import { BiRightArrowAlt } from "react-icons/bi";
+
 import Link from "next/link";
 
 const FeaturedProducts = () => {
@@ -130,10 +132,11 @@ const FeaturedProducts = () => {
                 </div>
 
                 {/* Add to Cart Button */}
-                <button className="w-full bg-linear-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white py-2 rounded-lg font-semibold flex items-center justify-center gap-2 transition duration-200 cursor-pointer">
-                  <AiOutlineShoppingCart size={16} />
-                  Add to Cart
-                </button>
+                <Link  
+                href={`/products/${product.id}`}
+                 className="theme-btn-two">
+                  View Details <BiRightArrowAlt />
+                </Link>
               </div>
             </div>
           ))}

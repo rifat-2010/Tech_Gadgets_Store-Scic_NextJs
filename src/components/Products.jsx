@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineStar, AiOutlineShoppingCart } from "react-icons/ai";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -140,13 +142,13 @@ const Products = () => {
                 </div>
 
                 {/* Add to Cart Button */}
-                <button
+                <Link
+                  href={`/products/${product.id}`}
                   disabled={product.stock === 0}
-                  className="theme-btn w-full h-11.20]"
+                  className="theme-btn-two"
                 >
-                  <AiOutlineShoppingCart />
-                  View Details
-                </button>
+                  View Details <BiRightArrowAlt />
+                </Link>
               </div>
             </div>
           ))}

@@ -36,6 +36,10 @@ body {
   @apply px-8 py-3 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2 text-lg cursor-pointer border-none;
 }
 
+.theme-btn-two {
+  @apply px-8 py-2.5 w-full bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2 text-lg cursor-pointer border-none;
+}
+
 /* Active Navigation Link Styles */
 .nav-link {
   @apply text-gray-700 hover:text-blue-600 font-medium transition duration-200 relative pb-1;
